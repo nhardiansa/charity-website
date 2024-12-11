@@ -48,7 +48,9 @@ class CategoryResource extends Resource
         Tables\Actions\BulkActionGroup::make([
           Tables\Actions\DeleteBulkAction::make(),
         ]),
-      ]);
+      ])
+      ->emptyStateHeading('No categories found')
+      ->emptyStateIcon('heroicon-o-folder-open');
   }
 
   public static function getRelations(): array
